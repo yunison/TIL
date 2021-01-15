@@ -1,9 +1,11 @@
 # React Study
 
+# 제 1장, 리액트 설치
+
 **Module not found  
 ———————————————**  
  npm i (npm install)
-pm start
+npm start
 
 - 리액트 설치
 
@@ -15,7 +17,7 @@ pm start
 
   ## Create React App 사용하기
 
-  1. 작업환경 폴더에 터미널 위치 → npx create-react-app hello 입력
+  1. **작업환경 폴더에 터미널 위치 → npx create-react-app hello 입력**
 
   - `yarn start` (npm start)
   - `yarn build` (npm run build)
@@ -24,18 +26,18 @@ pm start
 
   * 여기서 hello는 새로 진행하는 프로젝트의 폴더이름이 됩니다.
 
-  2. 리액트 앱이 완성된 폴더로 터미널을 이동시켜 yarn start 입력
+  2. **리액트 앱이 완성된 폴더로 터미널을 이동시켜 yarn start 입력**
 
-  3. 리액트 개발을 용이하게 하기위한 개발자 도구→ [확장프로그램 다운](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en-US)
+  3. **리액트 개발을 용이하게 하기위한 개발자 도구→ [확장프로그램 다운](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en-US)**
 
-  4. React와 SCSS를 함께 사용하려면,
+  4. **React와 SCSS를 함께 사용하려면,**
 
   - react-route 설치 → `npm install react-router-dom --save`
   - index.js에서 App.js 대신,  
-    `ReactDOM.render(<Routes />, document.getElementByID("root"))`  
-    로 변경
+     `ReactDOM.render(<Routes />, document.getElementByID("root"))`  
+     로 변경
 
-  5. App.js 파일에서 routes 컴포넌트를 구현하는 파일명 또한 App.js → Routes.js로 변경. 아래는 App.js였던 것...
+    5.**App.js 파일에서 routes 컴포넌트를 구현하는 파일명 또한 App.js → Routes.js로 변경. 아래는 App.js였던 것...**
 
   ```jsx
   import React from "react";
@@ -58,7 +60,7 @@ pm start
   export default Routes;
   ```
 
-  6. 여기까지 훌훌 날려버리시길...
+  6. **여기까지 훌훌 날려버리시길...**
 
   ```jsx
   import React from "react";
@@ -67,7 +69,7 @@ pm start
   ReactDOM.render(<Routes />, document.getElementById("root"));
   ```
 
-  7. scss 설치
+  7. **scss 설치**
 
   ```bash
   npm install node-sass
