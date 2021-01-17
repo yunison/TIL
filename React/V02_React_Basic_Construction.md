@@ -87,3 +87,37 @@ export default App;
 ```
 
 그러나, add()하면 페이지가 onLoad되자마자 즉시 실행하는 것이고, ()를 떼면 클릭 되었을 때 실행되는 것이다. 즉, `onClick={this.add()}`와, `onClick={this.add}`는 언제 실행되냐에 따라 다르니 주의하라는 것이다.
+
+7. 리액트는 자동적으로 class component의 method를 "자동으로"실행한다. class component는 "state"이다.
+
+8. state는 object이고, component의 data를 넣을 공간이 있으며, 이 데이터는 변할 수 있다. 따라서 setState는 새로운 state를 받아야 하며, setState({count:1})해야 변화가 있다. 아래는 예시이다. 1번은 안 되고, 2번은 된다.
+   [1번]
+
+```jsx
+state = {
+  count: 0,
+};
+add = () => {
+  this.state.count = 1;
+};
+minus = () => {
+  this.state.count = -1;
+};
+```
+
+[2번]
+
+```jsx
+add = () => {
+  this.setState({ count: 1 });
+};
+minus = () => {
+  this.setState({ count: -1 });
+};
+```
+
+setState를 사용하지 않으면 새 state와 함께 render function이 호출되지 않는다. 그래서 상태가 변화하지 않는다.
+
+**setState를 하면, react는 새로운 state와 함께 render function을 호출한다.**
+
+**하지만, state에 의존하는 코드는 좋지 않다.**
